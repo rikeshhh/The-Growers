@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: #E1D9D1; */
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.wrapper {
+    margin-top: 10%;
+}
+
+.wrapper h1 {
+    font-family: 'Allura', cursive;
+    font-size: 52px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.wrapper p{
+padding-left: 150px;
+padding-right: 150px;
+text-align: center;
+font-size: 20px;
+}
+.parent-card{
+padding: 100px 100px;
+}
+.cards{
+display: grid;
+grid-template-columns: repeat(3,1fr);
+gap: 20px;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+.parent-card .cards .one{
+padding: 40px;
+border-radius: 20px;
+height: 200px;
+box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;text-align: center;
+}
+.parent-card .cards .one p{
+letter-spacing: 4px;
+padding: 10px 10px;
+margin-top: 10px;
+}
+.parent-card .cards .one:hover{
+    transform: scale(1.5);
+}
+#center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.buysection{
+   display: grid;
+   grid-template-columns:repeat(2,600px);
+   grid-template-rows: 610px;
+   justify-content: right;
+   align-items: center;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.image-radius{
+    border-radius: 60%;
+}
+.buysection a{
+    color: green;
+  
+    padding: 8px;
+}
+.buysection-text-content{
+    color: black;
+    
+    border-radius: 43% 57% 21% 79% / 100% 0% 100% 0%;
+    width: 400;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+}
+/* @keyframes mymove {
+    from {background-color: #CCF381;color:  #4831D4;margin-right: 20%;}
+    50% {background-color:  #8AAAE5;color: #FCF6F5FF;margin-left: 50%;} /* ignored */
+    /* to {background-color: #2F3C7E;color: #FBEAEB;margin-left:20%;}
+  } */
+/* .buysection-text-content p{
+    width: 300px;
+    font-size: 15px; */
+/* } */ 

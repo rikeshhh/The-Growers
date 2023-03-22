@@ -115,33 +115,15 @@ if(isset($_POST['update_product'])){
             <h3>add product</h3>
             <input type="text" name="name" class="box" placeholder="enter product name" required>
             <input type="number" min="0" name="price" class="box" placeholder="enter product price" required>
-            <input type="text" name="author" class="box" placeholder="enter author name" required>
-            <input type="text" list="genres" name="genres" class="box" placeholder="Enter Genres" required>
+            <input type="text" name="author" class="box" placeholder="enter scientific name" required>
+            <input type="text" list="genres" name="genres" class="box" placeholder="Enter Types" required>
             <datalist id="genres">
-                <option>Action</option>
-                <option>Adventure</option>
-                <option>classic</option>
-                <option>comic book</option>
-                <option>Novel</option>
-                <option>Detective</option>
-                <option>Mystery</option>
-                <option>Fantasy</option>
-                <option>Historical Fiction</option>
-                <option>Horror</option>
-                <option>Literary Fiction</option>
-                <option>Romance</option>
-                <option>SCi-fic</option>
-                <option>Short stories</option>
-                <option>Suspense and Thrillers</option>
-                <option>Women's Fiction</option>
-                <option>Biographies and Autobiographies</option>
-                <option>Cookbooks</option>
-                <option>Essays</option>
-                <option>History</option>
-                <option>Memoir</option>
-                <option>Poetry</option>
-                <option>Self-Help</option>
-                <option>True Crime</option>
+                <option>Indoor</option>
+                <option>Outdoor</option>
+                <option>Pots</option>
+                <option>Gifts</option>
+               
+              
             </datalist>
             <input type="file" name="image" accept="image/jpg, image/jpeg, image/png" class="box" required>
             <!-- <input type="text" name="product_desc" class="box" placeholder="enter product description" required> -->
@@ -207,7 +189,7 @@ if(isset($_POST['update_product'])){
                         <div class="product-name">Price</div>
                     </th>
                     <th>
-                        <div class="product-name">Author</div>
+                        <div class="product-name">Scientific Name</div>
                     </th>
                 </tr>
                 <?php

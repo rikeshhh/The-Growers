@@ -103,10 +103,11 @@ section{
    margin-top: 1rem;
    padding:1rem 3rem;
    cursor: pointer;
-   color:var(--white);
+   color:var(--black);
    font-size: 1.8rem;
    border-radius: .5rem;
    text-transform: capitalize;
+   border: 1px solid black;
 }
 
 .btn:hover,
@@ -129,7 +130,7 @@ section{
 }
 
 .white-btn:hover{
-   background-color: var(--white);
+   background-color: var(--green);
    color:var(--black);
 }
 
@@ -344,18 +345,65 @@ section{
 }
 
 .home{
-   min-height: 70vh;
-   background:url("wallhaven-39qjjd.jpg") no-repeat;
-   background-size: cover;
-   background-position: center;
-   display: flex;
-   align-items: center;
-   justify-content: center;
+   background-image: url("./homebg.jpg"); /* The image used */
+   background-color: #cccccc; /* Used if the image is unavailable */
+   height: 500px; /* You must set a specified height */
+   background-position: center; /* Center the image */
+   background-repeat: no-repeat; /* Do not repeat the image */
+   background-size: cover; /* Resize the background image to cover the entire container */
+
 }
 
+
+   .home .wrapper img{
+      width:100%;
+      height:100%;
+      background-color: --light-white;
+      
+}
+.container{
+   width: 300px;
+  
+   overflow: hidden;
+   border: 10px solid #ffffff;
+   border-radius: 8px;
+   box-shadow: 10px 25px 30px rgba(0,0,0,0.3);
+}
+.wrapper{
+   width: 100%;
+   display: flex;
+   animation: slide 16s infinite;
+}
+@keyframes slide{
+   0%{
+       transform: translateX(0);
+       background-image: url('./animatedimage-3.png');
+   }
+   25%{
+       transform: translateX(0);
+   }
+   30%{
+       transform: translateX(-100%);
+   }
+   50%{
+       transform: translateX(-100%);
+   }
+   55%{
+       transform: translateX(-200%);
+   }
+   75%{
+       transform: translateX(-200%);
+   }
+   80%{
+       transform: translateX(-300%);
+   }
+   100%{
+       transform: translateX(-300%);
+   }
+}
 .home .content{
-   text-align: center;
    width: 60rem;
+   margin-top: 50px;
 }
 
 .home .content h3{
@@ -366,7 +414,7 @@ section{
 
 .home .content p{
    font-size:1.8rem;
-   color:var(--light-white);
+   color:var(--white);
    padding:1rem 0;
    line-height: 1.5;
 }
@@ -412,12 +460,12 @@ section{
 
 .products .box-container .box .price{
    position: absolute;
-   top:1rem; left:1rem;
+   top:1rem; 
+   left:1rem;
    border-radius: .5rem;
    padding:1rem;
    font-size: 2.5rem;
-   color:var(--white);
-   background-color: var(--red);
+   color: pink;
 }
 
 .about .flex{
@@ -925,6 +973,7 @@ section{
    margin-left: 15rem;
    margin-top: 20px;
 }
+
 
 /* media queries  */
 

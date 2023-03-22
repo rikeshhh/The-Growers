@@ -37,7 +37,9 @@ if(isset($_POST['add_to_cart'])){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
 
-    <link rel="stylesheet" href="./usercss/home.css">
+    <link rel="stylesheet" href="./usercss/home.css?v=<?php echo time(); ?>">
+
+
 </head>
 <title>featured</title>
 
@@ -46,7 +48,7 @@ if(isset($_POST['add_to_cart'])){
     ?>
     <section class="products">
 
-        <h1 class="title">Featured products</h1>
+        <h1 class="title">You may also like</h1>
 
         <div class="box-container">
 
@@ -68,7 +70,6 @@ if(isset($_POST['add_to_cart'])){
                 </a>
                 <div class="name"><?php echo $fetch_products['name']; ?></div>
                 <div class="price">NRS <?php echo $fetch_products['price']; ?>/-</div>
-                <div class="author">By: <?php echo $fetch_products['author']; ?></div>
                 <!-- <input type="number" min="1" name="product_quantity" value="1" class="qty"> -->
                 <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>">
                 <input type="hidden" name="product_price" value="<?php echo $fetch_products['price']; ?>">

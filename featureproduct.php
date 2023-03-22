@@ -19,7 +19,7 @@ include 'config.php';
             </a>
             <div class="name"><?php echo $fetch_products['name']; ?></div>
             <div class="price">NRS <?php echo $fetch_products['price']; ?>/-</div>
-            <div class="author">By: <?php echo $fetch_products['author']; ?></div>
+            <div class="author">Scientific: <?php echo $fetch_products['author']; ?></div>
             <!-- <input type="number" min="1" name="product_quantity" value="1" class="qty"> -->
             <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>">
             <input type="hidden" name="product_price" value="<?php echo $fetch_products['price']; ?>">

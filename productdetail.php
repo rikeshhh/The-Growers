@@ -55,7 +55,7 @@ $id = $_GET["id"];
                 <div class="name"><?php echo $fetch_products['name']; ?></div>
             </h4>
             <h3>
-                <div class="author">Author: <?php echo $fetch_products['author']; ?></div>
+                <div class="author">Scientific Name: <?php echo $fetch_products['author']; ?></div>
             </h3>
             <h3>
                 <div class="genres">Genres: <?php echo $fetch_products['genres']; ?></div>
@@ -73,11 +73,38 @@ $id = $_GET["id"];
             <input type="hidden" name="product_image" value="<?php echo $fetch_products['image']; ?>">
             <input type="hidden" name="product_desc" value="<?php echo $fetch_products['product_desc']; ?>">
         </div>
+      
     </section>
 </form>
+
+
+<div class="container">
+    <h1 style="border-bottom: 1px solid black;">Plant care tips</h1>
+    <div style="display:flex;gap: 40px;">
+    <label for="desc">Water:</label> 
+    <input id="desc" value="<?php echo $fetch_products['water']; ?>">  
+</div>
+<div style="display:flex;gap: 40px;flex-direction:row;">
+    <label for="desc">Soil:</label> 
+    <input id="desc" value="<?php echo $fetch_products['soil']; ?>">  
+</div>
+<div style="display:flex;gap: 40px;flex-direction:row;">
+    <label for="desc">Sunlight:</label> 
+    <input id="desc" value="<?php echo $fetch_products['sunlight']; ?>">  
+</div>
+<div style="display:flex;gap: 40px;flex-direction:row;">
+    <label for="desc">Fertilizer:</label> 
+    <input id="desc" value="<?php echo $fetch_products['fertilizer']; ?>">  
+</div>
+<div style="display:flex;flex-direction:row;gap: 40px;">
+    <label for="desc">Humidity:</label> 
+    <input id="desc" value="<?php echo $fetch_products['humidity']; ?>">  
+</div>
+  
+</div>
 <section class="products">
 
-    <h1 class="title">Featured products</h1>
+    <h1 class="title">You may also like</h1>
 
     <div class="box-container">
 

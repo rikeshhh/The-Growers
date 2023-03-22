@@ -21,13 +21,18 @@ if(isset($_POST['add_product'])){
    $product_desc=$_POST['product_desc'];
    $author=$_POST['author'];
    $genres=$_POST['genres'];
+   $water=$_POST['water'];
+   $sunlight=$_POST['sunlight'];
+   $fertilizer=$_POST['fertilizer'];
+   $soil=$_POST['soil'];
+   $humidity=$_POST['humidity'];
 
    $select_product_name = mysqli_query($conn, "SELECT name FROM `products` WHERE name = '$name' and type='latestproduct'") or die('query failed');
 
    if(mysqli_num_rows($select_product_name) > 0){
       $message[] = 'product name already added';
    }else{
-      $add_product_query = mysqli_query($conn, "INSERT INTO `products`(name, price, image,product_desc,author,type,genres) VALUES('$name', '$price', '$image','$product_desc','$author','latestproduct','$genres')") or die('query failed');
+      $add_product_query = mysqli_query($conn, "INSERT INTO `products`(name, price, image,product_desc,author,type,genres,water,soil,sunlight,fertilizer,humidity) VALUES('$name', '$price', '$image','$product_desc','$author','latestproduct','$genres','$water','$soil','$sunlight','$fertilizer','$humidity')") or die('query failed');
 
       if($add_product_query){
          if($image_size > 2000000){
@@ -115,14 +120,16 @@ if(isset($_POST['update_product'])){
             <h3>add product</h3>
             <input type="text" name="name" class="box" placeholder="enter product name" required>
             <input type="number" min="0" name="price" class="box" placeholder="enter product price" required>
-            <input type="text" name="author" class="box" placeholder="enter author name" required>
-            <input type="text" list="genres" name="genres" class="box" placeholder="Enter Genres" required>
+            <input type="text" name="author" class="box" placeholder="enter Scientific name" required>
+            <input type="text" list="genres" name="genres" class="box" placeholder="Enter Types" required>
             <datalist id="genres">
-                <option>Action</option>
-                <option>Adventure</option>
-                <option>classic</option>
-                <option>comic book</option>
-                <option>Novel</option>
+                <option>Indoor</option>
+                <option>Outdoor</option>
+                <option>Gifts</option>
+                <option>Decoration</option>
+                <option>Pots</option>
+
+                <!-- <option>Novel</option>
                 <option>Detective</option>
                 <option>Mystery</option>
                 <option>Fantasy</option>
@@ -141,12 +148,34 @@ if(isset($_POST['update_product'])){
                 <option>Memoir</option>
                 <option>Poetry</option>
                 <option>Self-Help</option>
-                <option>True Crime</option>
+                <option>True Crime</option> -->
             </datalist>
             <input type="file" name="image" accept="image/jpg, image/jpeg, image/png" class="box" required>
             <!-- <input type="text" name="product_desc" class="box" placeholder="enter product description" required> -->
             <textarea name="product_desc" class="box" placeholder="enter product description" required>
 </textarea>
+<p style="
+width:170px;
+padding:20px;
+border-radius:50px;
+ background-image: linear-gradient(45deg, #CC0099,#3366FF);
+ margin: 0 auto;
+ font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 20px;
+">Care and tips</p>
+<textarea name="water" class="box" placeholder="Water" required>
+</textarea>
+<textarea name="soil" class="box" placeholder="Soil" required>
+</textarea>
+<textarea name="sunlight" class="box" placeholder="Sunlight" required>
+</textarea>
+<textarea name="fertilizer" class="box" placeholder="Fertilizer" required>
+</textarea>
+<textarea name="humidity" class="box" placeholder="Humidity" required>
+</textarea>
+
             <input type="submit" value="add product" name="add_product" class="btn">
         </form>
 
@@ -207,7 +236,7 @@ if(isset($_POST['update_product'])){
                         <div class="product-name">Price</div>
                     </th>
                     <th>
-                        <div class="product-name">Author</div>
+                        <div class="product-name">Scientific Name</div>
                     </th>
                 </tr>
                 <?php
@@ -317,34 +346,16 @@ if(isset($_POST['update_product'])){
                 <input type="number" name="update_price" value="<?php echo $fetch_update['price']; ?>" min="0"
                     class="box" required placeholder="enter product price">
                 <input type="text" name="update_author" value="<?php echo $fetch_update['author']; ?>" class="box"
-                    required placeholder="enter Author">
+                    required placeholder="enter scientific name">
                 <input type="text" list="genres" name="update_genres" value="<?php echo $fetch_update['genres']; ?>"
                     class="box" required placeholder="enter Genres">
                 <datalist id="genres">
-                    <option>Action</option>
-                    <option>Adventure</option>
-                    <option>classic</option>
-                    <option>comic book</option>
-                    <option>Novel</option>
-                    <option>Detective</option>
-                    <option>Mystery</option>
-                    <option>Fantasy</option>
-                    <option>Historical Fiction</option>
-                    <option>Horror</option>
-                    <option>Literary Fiction</option>
-                    <option>Romance</option>
-                    <option>SCi-fic</option>
-                    <option>Short stories</option>
-                    <option>Suspense and Thrillers</option>
-                    <option>Women's Fiction</option>
-                    <option>Biographies and Autobiographies</option>
-                    <option>Cookbooks</option>
-                    <option>Essays</option>
-                    <option>History</option>
-                    <option>Memoir</option>
-                    <option>Poetry</option>
-                    <option>Self-Help</option>
-                    <option>True Crime</option>
+                    <option>Indoor</option>
+                    <option>Outdoor</option>
+                    <option>Gifts</option>
+                    <option>Decoration</option>
+                 
+                    
                 </datalist>
                 <input type="file" class="desc" name="update_image" accept="image/jpg, image/jpeg, image/png">
                 <!-- <input type="text" name="update_product_desc" value="<?php echo $fetch_update['product_desc']; ?>"

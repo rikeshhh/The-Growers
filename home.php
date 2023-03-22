@@ -37,7 +37,7 @@ if(isset($_POST['add_to_cart'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bookstore</title>
+    <title>TheGrowers</title>
 
     <!--Font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -45,7 +45,7 @@ if(isset($_POST['add_to_cart'])){
 
 
     <!-- CSS Linked -->
-    <link rel="stylesheet" href="usercss/style.css">
+    <link rel="stylesheet" href="usercss/style.css?v=<?php echo time(); ?>">
 </head>
 
 <body>
@@ -54,12 +54,17 @@ if(isset($_POST['add_to_cart'])){
 
     <section class="home">
 
+ 
+
+
         <div class="content">
-            <h3>Hand Picked Book to your door.</h3>
-            <p>It's impossible to walk thorugh a book store and be in the bad mood at the same time.
+            <h3>If a tree dies, plant another in its place.</h3>
+            <p id="spare-time">It's impossible to walk thorugh a book store and be in the bad mood at the same time.
             </p>
             <a href="shop.php" class="white-btn">discover more</a>
         </div>
+
+        <!-- <img src="./usercss/download (1).jpeg" class="contentTwo"> -->
 
     </section>
 
@@ -80,7 +85,7 @@ if(isset($_POST['add_to_cart'])){
                 </a>
                 <div class="name"><?php echo $fetch_products['name']; ?></div>
                 <div class="price">NRS <?php echo $fetch_products['price']; ?>/-</div>
-                <div class="author">By: <?php echo $fetch_products['author']; ?></div>
+                <!-- <div class="author">By: <?php echo $fetch_products['author']; ?></div> -->
                 <!-- <input type="number" min="1" name="product_quantity" value="1" class="qty"> -->
                 <input type="hidden" name="product_id" value="<?php echo $fetch_products['id']; ?>">
                 <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>">
@@ -104,6 +109,22 @@ if(isset($_POST['add_to_cart'])){
     </section>
     <?php include ('featureproduct.php');
     ?>
+    <section id="indoor">
+    <?php
+include ('./indoor/indoorproduct.php');
+?>
+
+    </section>
+<section>
+<?php
+include ('./outdoor/outdoorproduct.php');
+?>
+</section>
+<section>
+<?php
+include ('./pot/pot.php');
+?>
+</section>
 
     <section class="about">
 

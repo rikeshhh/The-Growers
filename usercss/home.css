@@ -108,7 +108,14 @@ html::-webkit-scrollbar-thumb{
     text-transform: none;
     color: var(--black);
 }
-
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+li{
+    list-style-type: none;
+}
 .header .header-1 .search-form label{
     font-size: 2.5rem;
     padding-right: 1.5rem;
@@ -146,7 +153,10 @@ html::-webkit-scrollbar-thumb{
 
 .header .header-2 .navbar{
     text-align: center;
-    background-image: linear-gradient(45deg, #CC0099,#3366FF);
+    color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header .header-2 .navbar a{
@@ -166,6 +176,51 @@ html::-webkit-scrollbar-thumb{
     z-index: 1000;
 }
 
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    display: block;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  .flexx{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .dropdown-content a:hover {background-color: #f1f1f1 ;
+color: black;
+}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+margin-top: -10px;    
+  }
+  
+  
 .bottom-navbar{
     text-align: center;
     background-image: linear-gradient(45deg, #CC0099,#3366FF);
@@ -236,7 +291,10 @@ html::-webkit-scrollbar-thumb{
     color: var(--black);
     text-transform: none;
 }
-
+.plant-description{
+    display: flex;
+    justify-content: center;
+}
 
 .login-form-container form .checkbox{
     display: flex;
@@ -249,6 +307,45 @@ html::-webkit-scrollbar-thumb{
     font-size: 1.5rem;
     color: var(--light-color);
     cursor: pointer;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 800px;
+    height: 600px;
+}
+.container h1{
+    text-align: center;
+    font-weight: bolder;
+}
+.container label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 160px;
+    font-weight: 300;
+    padding: .9rem 3rem;
+    border-radius: .5rem;
+    color: #fff;
+    background-image: linear-gradient(45deg, #CC0099,#3366FF);
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.container input{
+padding: 10px;
+width: 700px;
+line-height: 30px;
+margin-top: 20px;
+font-size: 20px;
+font-weight: 300;
 }
 
 .login-form-container form .btn{

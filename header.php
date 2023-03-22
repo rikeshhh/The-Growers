@@ -27,12 +27,14 @@ if(isset($_SESSION['user_id'])){
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
-    <link rel="stylesheet" href="./usercss/home.css">
+    <link rel="stylesheet" href="./usercss/home.css?v=<?php echo time(); ?>">
+
+
 </head>
 
 <header class="header">
     <div class="header-1">
-        <a href="home.php" class="logo"><i class=" fas fa-book"></i> Book<span>Store</span></a>
+        <a href="home.php" class="logo"><i class="fas fa-trees"></i> The<span>Growers</span></a>
         <!-- <form action="" class="search-form">
             <a href="search_page.php" class="fas fa-search"></a>
             <label for="search-box" class="fas fa-search"></label>
@@ -49,10 +51,23 @@ if(isset($_SESSION['user_id'])){
     <!-- navi -->
     <div class="header-2">
         <nav class="navbar">
-            <a href="./home.php">Home</a>
-            <a href="./feature.php">Featured</a>
-            <a href="./shop.php">Shop</a>
-            <a href="./latestproduct.php">latest product</a>
+           <li><a href="./home.php">Home</a></li> 
+           <li><a href="./feature.php">Featured</a></li>
+            <!-- <a href="./shop.php">Shop</a> -->
+            <li><a href="./latestproduct.php">latest product</a></li>
+            <li><a href="#indoor">Indoor</a></li>
+            <li>
+            <ul class="dropdown">
+  <a class="dropbtn">Dropdown</button>
+  <ul class="dropdown-content">
+<li><a href="#indoor">Indoor</a></li>
+<a href="#outdoor">Outdoor</a><br>
+<a href="#pots">Pots</a>
+</ul>
+    </li>
+      </ul>
+        </li>
+
         </nav>
 
     </div>
